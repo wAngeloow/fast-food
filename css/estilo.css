@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+html{
+    font-family: arial;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    /* scroll-behavior: smooth é para dar efeito na rolagem da página; */
+}
+
+header{
+    /* background: linear-gradient usado para criar degrade, podendo escolher "to top, left, bottom, right". */
+    background: linear-gradient(to top, #fff, #DC143C);
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+footer{
+    background-color: #DC143C;
+    color: #000;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+.conteudo{
+    /* padding-left ou os outros mexe apenas no que está escrito após o "-". */
+    padding: 1rem;
+    background-color: #fff;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    text-align: justify;
+    max-width: 90%;
+    /* pode ser em "px" tbm, (width - largura); */
+}
+.conteudo-topo{
+    padding: 1rem;
+    background-color: #fff;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    text-align: justify;
+    max-width: 90%;
+    padding-top: 21rem;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+    color: #8B0000;
+}
+
+h1{
+    font-size: 2.3rem;
+}
+
+h3{
+    /* sobrepõe mesmo que tenha um h3 dentro do footer ou outro... */
+    font-size: 2rem;
+}
+
+h4{
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+h5{
+    font-size: 3rem;
+    color: #8B0000;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+}
+
+figure{
+    text-align: center;
+}
+
+.imagens-site{
+    border-radius: 10px 10px 10px 10px;
+    width: 70%;
+    height: 50%;
+    border: solid #000;
+}
+#compras{
+    background-color: rgba(139,0,0, 0.75);
+    width: 120px;
+    height: 85px;
+    right: 0;
+    position: fixed;
+    text-align: center;
+    margin-top: 17rem;
+    z-index: 1;
+    /* z-index é para dar prioridade de visibilidade */
+    margin-right: 10px;
+    border-radius: 15px;
+    padding: 5px;
+}
+@media(min-width: 280px) and (max-width: 820px){
+    #compras{
+        margin-top: 4.5rem;
+    }
+    .conteudo-topo{
+        padding-top: 28.5rem !important;
+    }
+}
+
+#grid-conteudo{
+    background-color: #fff;
+    padding-top: 21rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* "repeat(auto-fill, minmax (300px, 1fr))" vai botar um do lado do outro em 300px, quando não couber na tela, vai fragmentar (fr) e colocar um em baixo do outro; */
+    /* grid-template é para escolher o tipo de grade, se é por área, linha, ou coluna; */
+    grid-gap: 1px;
+    /* grid-gap é para dar espaço entre um quadrado e outro; */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid div{
+    background-color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+#botao-compras{
+    background-color: #8B0000;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 1px;
+    border-color: #000;
+}
+
+nav{
+    text-align: right;
+    font-size: 1.6rem;
+    word-spacing: 10px;
+    /* word-spacing da um espaço entre as palavras */
+    margin-right: 5%;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 5px;
+    border: solid transparent;
+}
+a:hover{
+    background-color: #8B0000;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    border-color: #000;
+    text-shadow: 2px 2px 3px #000;
+}
+
+.cor-topicos{
+    color: #DC143C;
+    text-decoration: underline;
+}
+.preco{
+    padding-top: 1rem;
+    color: #000;
+    font-weight: bold;
+}
+/* VERSÃO MOBILE */
+@media(min-width: 280px) and (max-width: 820px){
+    .imagens-site{
+        border-radius: 50px 20px 50px 20px;
+        width: 90%;
+        height: 70%;
+    }
+    nav{
+        text-align: center;
+        font-size: 1.6rem;
+        word-spacing: 10px;
+    }
+    .conteudo-topo{
+        padding: 1rem;
+        background-color: #fff;
+        margin: 0 auto;
+        font-size: 1.6rem;
+        text-align: justify;
+        max-width: 90%;
+        padding-top: 21rem;
+    }
+    header{
+        background-color: #DC143C;
+        color: #fff;
+        font-size: 2rem;
+        padding: 1rem;
+        padding-top: 2rem;
+        position: fixed;
+        width: 100%;
+        text-align: left;
+        margin-right: 10px;
+    }
+}
